@@ -14,18 +14,12 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-/* encoder -> 2pin (L) + 3pin(R) -> 3pin(A) + 2pin(B) + 2pin(X)
-B -> LB? -> BB
-5 -> LR? -> AB
-A -> RW -> AW
-X -> RR -> XR
-G -> RB -> AB
-black on A goes to ground (outside) on rio ch 0
-black on B and X goes to signal (inside) on rio chs 1 & 2
-red on B and X is not connected
-
-[could put power and ground on all 3 rio ends and get sensible cabling]
-[better yet, just put 3 pin females on B and X and leave ground and signal unhooked]
+/* encoder -> 3 pin (3) & 2 pin (2) -> ribbon cable (R) -> PWMs (PA, PB)
+B -> 3Bk -> RGn -> PBWt
+5 -> 3Rd -> RRd -> PARd & PBRd
+A -> 3Wt -> RWt -> PAWt
+X -> do not use
+G -> 2Bk -> RBk -> PABk & PBBk
 */
 
 public class Robot extends TimedRobot {
